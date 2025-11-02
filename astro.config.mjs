@@ -6,6 +6,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   site: 'https://joeyembers.org',
   integrations: [mdx(), sitemap(), tailwind()],
-  build: { format: 'directory' },
-  vite: { server: { fs: { allow: ['.'] } } }
+  build: { format: 'directory' }
 });
