@@ -1,1 +1,37 @@
-<html><body><slot /></body></html>
+---
+const { title = 'Joey Embers · A Journey Home', description = 'Art, words, and the spaces between.' } = Astro.props;
+import '../styles/global.css';
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="container" style="display:flex;gap:16px;align-items:center;justify-content:space-between">
+      <a href="/" style="text-decoration:none;color:var(--ink)">
+        <strong>Joey Embers</strong> · <span style="opacity:.7">A Journey Home</span>
+      </a>
+      <nav style="display:flex;gap:16px">
+        <a href="/paintedmind/">The Painted Mind</a>
+        <a href="/paintedword/">The Painted Word</a>
+        <a href="/givingback/">Giving Back</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="footer">
+      <div class="container" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;align-items:center">
+        <div>© {new Date().getFullYear()} Joey Embers · A Journey Home</div>
+        <div style="opacity:.9">Instagram · LinkedIn · <a href="mailto:hello@joeyembers.org">Email</a></div>
+      </div>
+    </footer>
+  </body>
+</html>

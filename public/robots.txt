@@ -1,1 +1,3 @@
-User-agent: *\nAllow: /\nSitemap: /sitemap-index.xml\n
+User-agent: *
+Allow: /
+Sitemap: /sitemap-index.xml

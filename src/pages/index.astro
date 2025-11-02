@@ -1,1 +1,42 @@
-<h1>Joey Embers · A Journey Home</h1>
+---
+import Base from '../layouts/Base.astro';
+const hero = '/images/hero.svg';
+---
+<Base title="Joey Embers · A Journey Home">
+  <section class="hero" style={`--bg:url(${hero})`}>
+    <div>
+      <h1>Joey Embers · A Journey Home</h1>
+      <p>Art, words, and the spaces between.</p>
+    </div>
+  </section>
+
+  <section class="spotlight">
+    <div>
+      <img src="/images/sample-art.svg" alt="Spotlight artwork" />
+    </div>
+    <aside>
+      <h2>Spotlight</h2>
+      <p class="lede">A living studio: paint, memory, and the quiet work of becoming.</p>
+      <div class="facts">
+        <strong>From The Painted Mind</strong><br/>
+        <a href="/paintedmind/">Explore the work →</a>
+      </div>
+    </aside>
+  </section>
+
+  <section class="spotlight">
+    <div>
+      <img src="/images/sample-writing.svg" alt="Spotlight writing" />
+    </div>
+    <aside>
+      <h2>Words</h2>
+      <p class="lede">Poems and essays—honest, pared back, breathing.</p>
+      <div class="facts">
+        <strong>From The Painted Word</strong><br/>
+        <a href="/paintedword/">Read the latest →</a>
+      </div>
+    </aside>
+  </section>
+
+  <div class="quote">“Each piece left behind is an offering, a conversation begun.”</div>
+</Base>
